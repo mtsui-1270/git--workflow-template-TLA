@@ -157,9 +157,9 @@ Use this format: `your-name/what-youre-doing`
 
 | Good ✅                        | Avoid ❌         |
 |-------------------------------|-----------------|
-| `sofia/add-login-page`        | `test`          |
-| `marcus/fix-nav-bug`          | `stuff`         |
-| `priya/update-readme`         | `branch1`       |
+| `name/add-login-page`        | `test`          |
+| `name/fix-nav-bug`          | `stuff`         |
+| `name/update-readme`         | `branch1`       |
 
 ---
 
