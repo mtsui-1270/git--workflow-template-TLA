@@ -44,7 +44,7 @@ git push origin your-branch  # send to GitHub
 
 ---
 
-## Good Commit Messages
-- ✅ `"Add navbar with working links"`
-- ✅ `"Fix broken login button"`
-- ❌ `"stuff"`, `"changes"`, `"asdfgh"`
+## Good Commit Messages (be specific)
+- `"Add navbar with working links"`
+- `"Fix broken login button"`
+
