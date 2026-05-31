@@ -1,5 +1,20 @@
 # Git Workflow Guide
 
+## Setting Up a Repo From Scratch in your Terminal
+
+```bash
+git init                                # turn your folder into a git repo
+git branch -M main                      # rename default branch to main
+git remote add origin YOUR-GITHUB-URL  # connect it to GitHub
+git add .                               # stage everything
+git commit -m "Initial commit"          # first snapshot
+git push -u origin main                 # send to GitHub (-u saves the connection)
+```
+
+> Get YOUR-GITHUB-URL from GitHub: go to your repo → green "Code" button → copy the HTTPS link.
+
+---
+
 ## The Core Commands
 
 ```bash
@@ -44,7 +59,6 @@ git push origin your-branch  # send to GitHub
 
 ---
 
-## Good Commit Messages (be specific)
-- `"Add navbar with working links"`
-- `"Fix broken login button"`
-
+## Good Commit Messages(be specific)
+-  `"Add navbar with working links"`
+-  `"Fix broken login button"`
