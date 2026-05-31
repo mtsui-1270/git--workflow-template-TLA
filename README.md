@@ -1,80 +1,50 @@
 # Git Workflow Guide
 
-> **Golden rule:** Never commit directly to `main`. Always work on a branch.
+## The Core Commands
 
----
-
-## The Everyday Loop
-
-```
-main
- └── your-feature-branch   ← you work here
-      └── pull request      ← teammates review here
-           └── merge        ← goes back into main
+```bash
+git status              # see what files you've changed
+git add .               # stage all your changes
+git commit -m "message" # save a snapshot with a description
+git push origin main    # send it to GitHub
 ```
 
 ---
 
-## Step-by-Step
+## Making Your First Commit to a Branch
 
-### Starting a new task
 ```bash
-git checkout main
-git pull origin main
-git checkout -b your-name/short-description
-# Example: git checkout -b mariah/add-login-page
-```
+# 1. Create and switch to a new branch
+git checkout -b your-name/feature-name
 
-### Saving your work
-```bash
+# 2. Check what you've changed
+git status
+
+# 3. Stage your changes
 git add .
-git commit -m "Short description of what you did"
-git push origin your-name/short-description
+
+# 4. Commit with a clear message
+git commit -m "Initial commit: add login page"
+
+# 5. Push the branch to GitHub
+git push origin your-name/feature-name
 ```
 
-### Opening a Pull Request(PR)
-1. Go to your repo on GitHub
-2. Click **"Compare & pull request"**
-3. Write a short description of what you changed
-4. Tag a teammate to review
-5. Wait for approval before merging
+---
 
-### After your PR is merged
+## Everyday Loop (After Your First Commit)
+
 ```bash
-git checkout main
-git pull origin main
+# Make your changes, then:
+git status              # what changed?
+git add .               # stage it
+git commit -m "..."     # save it
+git push origin your-branch  # send to GitHub
 ```
 
 ---
 
-## Branch Naming
-Use: `your-name/what-youre-doing`
-- ✅ `mariah/add-login-page`
-- ✅ `name/fix-nav-bug`
-- ❌ `test`, `stuff`, `branch1`
-
----
-
-## Merge Conflict? Don't Panic.
-```bash
-git checkout your-branch
-git pull origin main
-```
-Git will mark conflicts like this in your file:
-```
-<<<<<<< HEAD
-your version
-=======
-teammate's version
->>>>>>> main
-```
-Pick one version, delete the markers, save, then `git add .` and `git commit`.
-
----
-
-## Quick Fixes
-| Problem | Solution |
-|--------|----------|
-| "What branch am I on?" | `git branch` — the `*` one is yours |
-| "My push was rejected" | `git pull origin your-branch` first, then push |
-| "I committed to main by accident" | Don't push — ask a teammate |
+## Good Commit Messages
+- ✅ `"Add navbar with working links"`
+- ✅ `"Fix broken login button"`
+- ❌ `"stuff"`, `"changes"`, `"asdfgh"`
