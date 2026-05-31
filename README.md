@@ -31,9 +31,9 @@ Replace this with 2–3 sentences describing:
 
 | Layer      | Technology         |
 |------------|--------------------|
-| Frontend   | ex HTML/CSS/JS   |
-| Backend    | ex Python/Flask  |
-| Database   | ex SQLite        |
+| Frontend   |....  |
+| Backend    |....  |
+| Database   | ....        |
 | Version Control | Git + GitHub  |
 
 ---------------------
